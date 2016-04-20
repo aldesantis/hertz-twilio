@@ -59,7 +59,7 @@ class User
   include Hertz::Notifiable
 
   def hertz_phone_number
-    phone_number_verified? ? phone_number : false
+    phone_number if phone_number_verified?
   end
 end
 ```
