@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rails', '~> 4.2.6'
   s.add_dependency 'hertz', '~> 0.1.0'
-  s.add_dependency 'twilio-ruby', '~> 4.2.1'
+  s.add_dependency 'twilio-ruby', '~> 4.11.1'
 
   s.add_development_dependency 'rubocop'
   s.add_development_dependency 'rubocop-rspec'
