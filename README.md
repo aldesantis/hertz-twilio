@@ -82,3 +82,4 @@ The gem is available as open source under the terms of the
 # To do
 
 - [ ] Allow changing the job's queue
+- [ ] Store notification delivery in the DB to avoid resending
