@@ -1,5 +1,7 @@
 # Hertz::Courier::Twilio
 
+[![Dependency Status](https://gemnasium.com/badges/github.com/alessandro1997/hertz-courier-twilio.svg)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
+
 This is a [Hertz](https://github.com/alessandro1997/hertz) courier for sending
 notifications to your users via SMS by leveraging the
 [Twilio](https://www.twilio.com) API.
