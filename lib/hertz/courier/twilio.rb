@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 require 'hertz'
 
 require 'hertz/courier/twilio/engine'
