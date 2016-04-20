@@ -26,15 +26,29 @@ module Hertz
 
         subject { described_class.new }
 
-        it 'delivers the notification by SMS' do
-          subject.perform(notification)
+        context 'when the receiver has a phone number' do
+          it 'delivers the notification by SMS' do
+            subject.perform(notification)
 
-          expect(twilio_messages).to have_received(:create)
-            .with(a_hash_including(
-              to: notification.receiver.phone_number,
-              from: Hertz::Courier::Twilio.phone_number,
-              body: notification.sms_body
-            ))
+            expect(twilio_messages).to have_received(:create)
+              .with(a_hash_including(
+                to: notification.receiver.phone_number,
+                from: Hertz::Courier::Twilio.phone_number,
+                body: notification.sms_body
+              ))
+          end
+        end
+
+        context 'when the receiver does not have a phone number' do
+          before(:each) do
+            allow(notification.receiver).to receive(:hertz_phone_number)
+              .and_return(false)
+          end
+
+          it 'does not deliver the notification' do
+            subject.perform(notification)
+            expect(twilio_messages).not_to have_received(:create)
+          end
         end
       end
     end

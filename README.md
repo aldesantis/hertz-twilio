@@ -33,6 +33,10 @@ Then, run the installer generator:
 $ rails g hertz:courier:twilio:install
 ```
 
+The courier will use ActiveJob to asynchronously deliver the text messages, so
+make sure that you're executing background jobs with some adapter (`inline` will
+work, even though it's not recommended). Jobs are pushed to the `default` queue.
+
 Finally, you will have to expose a `#hertz_phone_number` method in your receiver
 class:
 
@@ -46,11 +50,19 @@ class User
 end
 ```
 
-The courier will use ActiveJob to asynchronously deliver the text messages, so
-make sure that you're executing background jobs with some adapter (`inline` will
-work, even though it's not recommended).
+If `#hertz_phone_number` returns an empty value (i.e. `false`, `nil` or an empty
+string) at the time the job is executed the notification will not be delivered.
+This allows you to programmatically enable/disable SMS notifications for a user:
 
-Jobs are pushed to the `default` queue.
+```ruby
+class User
+  include Hertz::Notifiable
+
+  def hertz_phone_number
+    phone_number_verified? ? phone_number : false
+  end
+end
+```
 
 ## Usage
 

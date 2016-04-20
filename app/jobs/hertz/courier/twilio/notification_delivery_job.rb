@@ -6,6 +6,8 @@ module Hertz
         queue_as :default
 
         def perform(notification)
+          return unless notification.receiver.hertz_phone_number.present?
+
           twilio_client.messages.create(
             to: notification.receiver.hertz_phone_number,
             from: Hertz::Courier::Twilio.phone_number,
