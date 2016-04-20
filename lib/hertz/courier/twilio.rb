@@ -16,7 +16,8 @@ module Hertz
         end
 
         def deliver_notification(notification)
-          NotificationDeliveryJob.perform_later(notification)
+          Hertz::Courier::Twilio::NotificationDeliveryJob
+            .perform_later(notification)
         end
       end
     end
