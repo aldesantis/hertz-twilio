@@ -11,8 +11,8 @@ module Hertz
       mattr_accessor :phone_number, :account_sid, :auth_token
 
       class << self
-        def configure(&block)
-          block.call(self)
+        def configure
+          yield(self)
         end
 
         def deliver_notification(notification)
