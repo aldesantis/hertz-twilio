@@ -1,5 +1,5 @@
 class TestNotification < Hertz::Notification
-  deliver_by :sms
+  deliver_by :twilio
 
   def sms_body
     'Test Notification'
