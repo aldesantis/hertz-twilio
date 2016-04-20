@@ -27,9 +27,47 @@ Or install it yourself as:
 $ gem install hertz-courier-twilio
 ```
 
+Then, run the installer generator:
+
+```console
+$ rails g hertz:courier:twilio:install
+```
+
+Finally, you will have to expose a `#hertz_phone_number` method in your receiver
+class:
+
+```ruby
+class User
+  include Hertz::Notifiable
+
+  def hertz_phone_number
+    phone_number
+  end
+end
+```
+
+The courier will use ActiveJob to asynchronously deliver the text messages, so
+make sure that you're executing background jobs with some adapter (`inline` will
+work, even though it's not recommended).
+
+Jobs are pushed to the `default` queue.
+
 ## Usage
 
-TODO: Add usage instructions
+All you need to do in order to start delivering notifications by SMS is add
+`twilio` to the notification's `deliver_by` statement and provide an SMS body:
+
+```ruby
+class CommentNotification < Hertz::Notification
+  deliver_by :twilio
+
+  def sms_body
+    'You received a new comment!'
+  end
+end
+```
+
+All `CommentNotification`s will now be delivered by SMS! :)
 
 ## Contributing
 
@@ -40,3 +78,7 @@ https://github.com/alessandro1997/hertz-courier-twilio.
 
 The gem is available as open source under the terms of the
 [MIT License](http://opensource.org/licenses/MIT).
+
+# To do
+
+- [ ] Allow changing the job's queue
