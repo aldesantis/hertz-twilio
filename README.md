@@ -51,7 +51,7 @@ end
 ```
 
 If `#hertz_phone_number` returns an empty value (i.e. `false`, `nil` or an empty
-string) at the time the job is executed the notification will not be delivered.
+string) at the time the job is executed, the notification will not be delivered.
 This allows you to programmatically enable/disable SMS notifications for a user:
 
 ```ruby
