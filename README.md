@@ -1,5 +1,6 @@
 # Hertz::Courier::Twilio
 
+[![Gem Version](https://badge.fury.io/rb/hertz-courier-twilio.svg)](https://badge.fury.io/rb/hertz-courier-twilio)
 [![Dependency Status](https://gemnasium.com/badges/github.com/alessandro1997/hertz-courier-twilio.svg)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
 [![Code Climate](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio/badges/gpa.svg)](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio)
 
