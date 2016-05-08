@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    hertz-courier-twilio (0.0.1)
+    hertz-courier-twilio (1.0.0)
       hertz (~> 1.0.0)
       rails (~> 4.2.6)
       twilio-ruby (~> 4.11.1)
