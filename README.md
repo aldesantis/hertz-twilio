@@ -82,6 +82,9 @@ end
 
 All `CommentNotification`s will now be delivered by SMS! :)
 
+**NOTE:** This courier uses the [deliveries API](https://github.com/alessandro1997/hertz#tracking-delivery-status)
+to prevent double deliveries.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
@@ -95,4 +98,3 @@ The gem is available as open source under the terms of the
 # To do
 
 - [ ] Allow changing the job's queue
-- [ ] Store notification delivery in the DB to avoid resending
