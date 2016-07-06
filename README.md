@@ -1,8 +1,8 @@
 # Hertz::Courier::Twilio
 
-[![Gem Version](https://badge.fury.io/rb/hertz-courier-twilio.svg)](https://badge.fury.io/rb/hertz-courier-twilio)
-[![Dependency Status](https://gemnasium.com/badges/github.com/alessandro1997/hertz-courier-twilio.svg)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
-[![Code Climate](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio/badges/gpa.svg)](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio)
+[![Gem Version](https://img.shields.io/gem/v/hertz-courier-twilio-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://rubygems.org/gems/hertz-courier-twilio)
+[![Dependency Status](https://img.shields.io/gemnasium/alessandro1997/hertz-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
+[![Code Climate](https://img.shields.io/codeclimate/github/alessandro1997/hertz-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio)
 
 This is a [Hertz](https://github.com/alessandro1997/hertz) courier for sending
 notifications to your users via SMS by leveraging the
