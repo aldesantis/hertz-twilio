@@ -1,6 +1,6 @@
 # Hertz::Courier::Twilio
 
-[![Gem Version](https://img.shields.io/gem/v/hertz-courier-twilio-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://rubygems.org/gems/hertz-courier-twilio)
+[![Gem Version](https://img.shields.io/gem/v/hertz-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://rubygems.org/gems/hertz-courier-twilio)
 [![Dependency Status](https://img.shields.io/gemnasium/alessandro1997/hertz-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
 [![Code Climate](https://img.shields.io/codeclimate/github/alessandro1997/hertz-courier-twilio.svg?maxAge=2592000&style=flat-square)](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio)
 
