@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 Hertz::Courier::Twilio.configure do |config|
   # Your Twilio phone number.
   config.phone_number = '+390123456789'
