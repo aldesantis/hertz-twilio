@@ -13,6 +13,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Adopted Semantic Versioning
 - Updated and linted codebase
 
 ## [1.0.2]
