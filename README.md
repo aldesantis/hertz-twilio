@@ -1,8 +1,9 @@
 # Hertz::Courier::Twilio
 
-[![Gem Version](https://img.shields.io/gem/v/hertz-courier-twilio.svg?maxAge=3600&style=flat-square)](https://rubygems.org/gems/hertz-courier-twilio)
-[![Dependency Status](https://img.shields.io/gemnasium/alessandro1997/hertz-courier-twilio.svg?maxAge=3600&style=flat-square)](https://gemnasium.com/github.com/alessandro1997/hertz-courier-twilio)
-[![Code Climate](https://img.shields.io/codeclimate/github/alessandro1997/hertz-courier-twilio.svg?maxAge=3600&style=flat-square)](https://codeclimate.com/github/alessandro1997/hertz-courier-twilio)
+[![Build Status](https://travis-ci.org/aldesantis/hertz-twilio.svg?branch=master)](https://travis-ci.org/aldesantis/hertz-twilio)
+[![Dependency Status](https://gemnasium.com/badges/github.com/aldesantis/hertz-twilio.svg)](https://gemnasium.com/github.com/aldesantis/hertz-twilio)
+[![Coverage Status](https://coveralls.io/repos/github/aldesantis/hertz-twilio/badge.svg?branch=master)](https://coveralls.io/github/aldesantis/hertz-twilio?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e51e8d7489eb72ab97ba/maintainability)](https://codeclimate.com/github/aldesantis/hertz-twilio/maintainability)
 
 This is a [Hertz](https://github.com/alessandro1997/hertz) courier for sending notifications to your users via SMS by
 leveraging the [Twilio](https://www.twilio.com) API.
@@ -12,7 +13,7 @@ leveraging the [Twilio](https://www.twilio.com) API.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'hertz-courier-twilio'
+gem 'hertz-twilio'
 ```
 
 And then execute:
@@ -24,7 +25,7 @@ $ bundle
 Or install it yourself as:
 
 ```console
-$ gem install hertz-courier-twilio
+$ gem install hertz-twilio
 ```
 
 Then, run the installer generator:
@@ -80,12 +81,12 @@ end
 
 All `CommentNotification`s will now be delivered by SMS! :)
 
-**NOTE:** This courier uses the [deliveries API](https://github.com/alessandro1997/hertz#tracking-delivery-status)
+**NOTE:** This courier uses the [deliveries API](https://github.com/aldesantis/hertz#tracking-delivery-status)
 to prevent double deliveries.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/alessandro1997/hertz-courier-twilio.
+Bug reports and pull requests are welcome on GitHub at https://github.com/aldesantis/hertz-twilio.
 
 ## License
 
