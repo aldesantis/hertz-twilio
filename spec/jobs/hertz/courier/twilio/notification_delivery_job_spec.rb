@@ -7,7 +7,7 @@ module Hertz
         subject { described_class.new }
 
         let(:twilio_client) { instance_double('::Twilio::REST::Client') }
-        let(:twilio_messages) { instance_spy('::Twilio::REST::Messages') }
+        let(:twilio_messages) { instance_double('::Twilio::REST::Messages') }
         let(:notification) { build_stubbed(:test_notification) }
 
         before do
@@ -29,17 +29,19 @@ module Hertz
 
           allow(notification).to receive(:mark_delivered_with)
             .with(:twilio)
+
+          allow(twilio_messages).to receive(:create)
         end
 
         it 'delivers the notification by SMS' do
-          subject.perform(notification)
-
-          expect(twilio_messages).to have_received(:create)
+          expect(twilio_messages).to receive(:create)
             .with(a_hash_including(
               to: notification.receiver.phone_number,
               from: Hertz::Courier::Twilio.phone_number,
               body: notification.sms_body
             ))
+
+          subject.perform(notification)
         end
 
         it 'marks the notification as delivered through Twilio' do
@@ -57,8 +59,8 @@ module Hertz
           end
 
           it 'does not deliver the notification' do
+            expect(twilio_messages).not_to receive(:create)
             subject.perform(notification)
-            expect(twilio_messages).not_to have_received(:create)
           end
         end
 
@@ -70,8 +72,8 @@ module Hertz
           end
 
           it 'does not deliver the notification' do
+            expect(twilio_messages).not_to receive(:create)
             subject.perform(notification)
-            expect(twilio_messages).not_to have_received(:create)
           end
         end
       end
