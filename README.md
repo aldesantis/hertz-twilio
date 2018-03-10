@@ -1,12 +1,12 @@
-# Hertz::Courier::Twilio
+# Hertz::Twilio
 
 [![Build Status](https://travis-ci.org/aldesantis/hertz-twilio.svg?branch=master)](https://travis-ci.org/aldesantis/hertz-twilio)
 [![Dependency Status](https://gemnasium.com/badges/github.com/aldesantis/hertz-twilio.svg)](https://gemnasium.com/github.com/aldesantis/hertz-twilio)
 [![Coverage Status](https://coveralls.io/repos/github/aldesantis/hertz-twilio/badge.svg?branch=master)](https://coveralls.io/github/aldesantis/hertz-twilio?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/204eed3c916b560ef788/maintainability)](https://codeclimate.com/github/aldesantis/hertz-twilio/maintainability)
 
-This is a [Hertz](https://github.com/alessandro1997/hertz) courier for sending notifications to your users via SMS by
-leveraging the [Twilio](https://www.twilio.com) API.
+This is a [Hertz](https://github.com/aldesantis/hertz) courier for sending notifications to your 
+users via SMS by leveraging the [Twilio](https://www.twilio.com) API.
 
 ## Installation
 
@@ -34,9 +34,9 @@ Then, run the installer generator:
 $ rails g hertz:courier:twilio:install
 ```
 
-The courier will use ActiveJob to asynchronously deliver the text messages, so make sure that you're executing 
-background jobs with some adapter (`inline` will work, even though it's not recommended). Jobs are pushed to the
-`default` queue.
+The courier will use ActiveJob to asynchronously deliver the text messages, so make sure that you're 
+executing background jobs with some adapter (`inline` will work, even though it's not recommended). 
+Jobs are pushed to the `default` queue.
 
 Finally, you will have to expose a `#hertz_phone_number` method in your receiver class:
 
@@ -50,9 +50,9 @@ class User
 end
 ```
 
-If `#hertz_phone_number` returns an empty value (i.e. `false`, `nil` or an empty string) at the time the job is
-executed, the notification will not be delivered. This allows you to programmatically enable/disable SMS notifications 
-for a user:
+If `#hertz_phone_number` returns an empty value (i.e. `false`, `nil` or an empty string) at the time 
+the job is executed, the notification will not be delivered. This allows you to programmatically 
+enable/disable SMS notifications for a user:
 
 ```ruby
 class User
@@ -66,8 +66,8 @@ end
 
 ## Usage
 
-All you need to do in order to start delivering notifications by SMS is add `twilio` to the notification's `#deliver_by`
-statement and provide an SMS body:
+All you need to do in order to start delivering notifications by SMS is add `twilio` to the 
+notification's `#deliver_by` statement and provide an SMS body:
 
 ```ruby
 class CommentNotification < Hertz::Notification
