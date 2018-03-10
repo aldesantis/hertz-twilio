@@ -101,3 +101,7 @@ Naming/AccessorMethodName:
 
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+Naming/FileName:
+  Exclude:
+    - hertz-twilio.gemspec
