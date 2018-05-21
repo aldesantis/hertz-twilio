@@ -8,7 +8,7 @@ require 'hertz/twilio/version'
 
 module Hertz
   module Twilio
-    mattr_accessor :phone_number, :account_sid, :auth_token
+    mattr_accessor :phone_number, :account_sid, :auth_token, :sender_id
 
     class << self
       def configure

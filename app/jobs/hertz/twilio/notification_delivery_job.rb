@@ -11,7 +11,7 @@ module Hertz
 
         twilio_client.messages.create(
           to: notification.receiver.hertz_phone_number,
-          from: Hertz::Twilio.phone_number,
+          from: Hertz::Twilio.sender_id || Hertz::Twilio.phone_number,
           body: notification.sms_body
         )
 

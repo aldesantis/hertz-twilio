@@ -7,6 +7,10 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Add support for alphanumeric sender IDs
+
 ### Changed
 
 - Changed namespace to `Hertz::Twilio`

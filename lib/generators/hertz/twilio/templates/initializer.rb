@@ -9,4 +9,8 @@ Hertz::Twilio.configure do |config|
 
   # Your Twilio authentication token
   config.auth_token = 'YourTwilioAuthToken'
+
+  # Optional: An alphanumeric sender ID that will appear instead of your phone number. Not setting
+  # this will just use `config.phone_number`.
+  config.sender_id = nil
 end
