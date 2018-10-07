@@ -30,7 +30,7 @@ $ gem install hertz-twilio
 Then, run the installer generator:
 
 ```console
-$ rails g hertz:courier:twilio:install
+$ rails g hertz:twilio:install
 ```
 
 The courier will use ActiveJob to asynchronously deliver the text messages, so make sure that you're 
