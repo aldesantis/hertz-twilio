@@ -33,10 +33,10 @@ RSpec.describe Hertz::Twilio::NotificationDeliveryJob do
   it 'delivers the notification by SMS' do
     expect(twilio_messages).to receive(:create)
       .with(a_hash_including(
-        to: notification.receiver.phone_number,
-        from: Hertz::Twilio.phone_number,
-        body: notification.sms_body
-      ))
+              to: notification.receiver.phone_number,
+              from: Hertz::Twilio.phone_number,
+              body: notification.sms_body
+            ))
 
     subject.perform(notification)
   end
