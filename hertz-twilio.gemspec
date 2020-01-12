@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'hertz', '~> 2.0'
   s.add_dependency 'twilio-ruby', '~> 5.6'
 
-  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'combustion'
+  s.add_development_dependency 'coveralls'
   s.add_development_dependency 'database_cleaner'
   s.add_development_dependency 'factory_bot_rails'
   s.add_development_dependency 'faker'
